@@ -4,7 +4,7 @@ local plugins = {
   { import = "plugins.mason" },
   { import = "plugins.snacks-nvim"},
   { import = "plugins.blink-cmp"},
-  { import = "plugins.nvim-lspconfig.lua"},
+  { import = "plugins.nvim-lspconfig"},
 }
 
 require("lazy").setup(plugins) 
