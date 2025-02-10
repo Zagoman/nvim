@@ -4,13 +4,12 @@ return {
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"saghen/blink.cmp",
-		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
 		-- Import necessary plugins
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
-    local blink_cmp = require("blink.cmp")
+		local blink_cmp = require("blink.cmp")
 
 		-- Set up capabilities for autocompletion
 		local capabilities = blink_cmp.get_lsp_capabilities()

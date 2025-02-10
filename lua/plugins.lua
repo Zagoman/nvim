@@ -4,7 +4,10 @@ local plugins = {
   { import = "plugins.mason" },
   { import = "plugins.snacks-nvim"},
   { import = "plugins.blink-cmp"},
+  { import = "plugins.harpoon"},
+  { import = "plugins.roslyn"},
+  { import = "plugins.conform"},
   { import = "plugins.nvim-lspconfig"},
 }
 
-require("lazy").setup(plugins) 
+require("lazy").setup(plugins)
