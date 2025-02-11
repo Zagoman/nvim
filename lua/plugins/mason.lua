@@ -57,7 +57,7 @@ return {
 				"json-lsp",
 				"lua-language-server",
 				"tailwindcss-language-server",
-				"typescript-language-server",
+				"ts_ls",
 				"yaml-language-server",
 				{ "roslyn", version = "4.14.0-1.25073.9" },
 			},

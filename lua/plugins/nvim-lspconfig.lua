@@ -86,7 +86,15 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-
+			["ts_ls"] = function()
+				lspconfig["ts_ls"].setup({
+					settings = {
+						completions = {
+							completeFunctionCalls = true,
+						},
+					},
+				})
+			end,
 			-- Specific handler for gopls with custom settings
 			["gopls"] = function()
 				lspconfig.gopls.setup({
