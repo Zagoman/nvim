@@ -19,7 +19,7 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("x", "<leader>p", [["_dP]])
 
 --------------------  Yanks to clipboard  -------------------
-keymap.set({"n", "v"}, "<leader>y", [["+y]])
+keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 
 --------------------  ctrc+c mapped to ESC  -------------------
 keymap.set("i", "<C-c>", "<Esc>")
@@ -34,4 +34,11 @@ keymap.set("i", "<C-k>", "<Up>", { desc = "Move Up" }) -- move up
 
 --------------------  use jk to exit insert mode -------------------
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
- 
+
+--------------------  Organize imports  -------------------
+keymap.set("n", "<leader>oi", function()
+	vim.lsp.buf.execute_command({
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+	})
+end, { desc = "Organize Imports" })

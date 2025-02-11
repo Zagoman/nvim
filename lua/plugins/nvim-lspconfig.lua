@@ -79,7 +79,6 @@ return {
 				client.server_capabilities.hoverProvider = false
 			end
 		end
-
 		mason_lspconfig.setup_handlers({
 			-- Default handler for all installed servers
 			function(server_name)

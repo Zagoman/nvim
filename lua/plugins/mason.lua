@@ -17,8 +17,11 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
+			registries = {
+				"github:mason-org/mason-registry",
+				"github:Crashdummyy/mason-registry",
+			},
 		})
-
 		mason_tool_installer.setup({
 			ensure_installed = {
 				-------- LIST OF FORMATTERS/DEBUGGERS/LINTERS TO INSTALL -------------
@@ -56,6 +59,7 @@ return {
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"yaml-language-server",
+				{ "roslyn", version = "4.14.0-1.25073.9" },
 			},
 			auto_update = true,
 			run_on_start = true,

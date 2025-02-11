@@ -7,7 +7,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				javascript = { "prettierd" },
-				typescript = { "prettierd" },
+				typescript = { "prettierd"},
 				javascriptreact = { "prettierd" },
 				typescriptreact = { "prettierd" },
 				svelte = { "prettierd" },
