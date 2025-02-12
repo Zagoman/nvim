@@ -34,11 +34,3 @@ keymap.set("i", "<C-k>", "<Up>", { desc = "Move Up" }) -- move up
 
 --------------------  use jk to exit insert mode -------------------
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
---------------------  Organize imports  -------------------
-keymap.set("n", "<leader>oi", function()
-	vim.lsp.buf.execute_command({
-		command = "_typescript.organizeImports",
-		arguments = { vim.api.nvim_buf_get_name(0) },
-	})
-end, { desc = "Organize Imports" })

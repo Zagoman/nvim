@@ -341,6 +341,24 @@ return {
 			desc = "Colorschemes",
 		},
 		-- LSP
+
+		{
+			"<leader>oi",
+			function()
+				vim.lsp.buf.execute_command({
+					command = "typescript.organizeImports",
+					arguments = { vim.api.nvim_buf_get_name(0) },
+				})
+			end,
+			desc = "Organize Imports",
+			mode = "n",
+		},
+		-- {
+		-- 	"<leader>mi",
+		-- 	vim.lsp.action["source.addMissingImports.ts"],
+		-- 	desc = "Add missing imports",
+		-- 	mode = "n",
+		-- },
 		{
 			"<leader>gd",
 			function()
