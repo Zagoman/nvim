@@ -1,4 +1,5 @@
 local plugins = {
+	{ import = "plugins.init" },
 	{ import = "plugins.catppuccin" },
 	{ import = "plugins.treesitter" },
 	{ import = "plugins.mason" },
@@ -8,6 +9,9 @@ local plugins = {
 	{ import = "plugins.roslyn" },
 	{ import = "plugins.overseer" },
 	{ import = "plugins.conform" },
+	{ import = "plugins.mini-pairs" },
+	{ import = "plugins.which-key" },
+	{ import = "plugins.grug-far" },
 	{ import = "plugins.nvim-lspconfig" },
 }
 
