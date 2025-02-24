@@ -46,8 +46,14 @@ return {
 				"tflint",
 				-- docker
 				"hadolint",
+				----- go
+				"gotests",
+				"gomodifytags",
+				"goimports",
+				"go-debug-adapter",
 				------- LANGUAGE SERVERS ----------
 				-- "aze-pipelines-language-server",
+				"gopls",
 				"bash-language-server",
 				"css-lsp",
 				"docker-compose-language-service",
