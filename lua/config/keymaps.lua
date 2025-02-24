@@ -24,6 +24,8 @@ keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 --------------------  ctrc+c mapped to ESC  -------------------
 keymap.set("i", "<C-c>", "<Esc>")
 
+keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart LSP rename" })
+
 --------------------  Movement Keys in Insert Mode -------------------
 -- keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" }) -- move to the beginning of the line
 -- keymap.set("i", "<C-e>", "<End>", { desc = "Move End of line" }) -- move to the end of the line
@@ -31,6 +33,3 @@ keymap.set("i", "<C-c>", "<Esc>")
 -- keymap.set("i", "<C-l>", "<Right>", { desc = "Move Right" }) -- move right
 -- keymap.set("i", "<C-j>", "<Down>", { desc = "Move Down" }) -- move down
 -- keymap.set("i", "<C-k>", "<Up>", { desc = "Move Up" }) -- move up
-
---------------------  use jk to exit insert mode -------------------
--- keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
