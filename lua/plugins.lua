@@ -3,6 +3,7 @@ local plugins = {
 	{ import = "plugins.catppuccin" },
 	{ import = "plugins.treesitter" },
 	{ import = "plugins.mason" },
+	{ import = "plugins.debug-dap" },
 	{ import = "plugins.snacks-nvim" },
 	{ import = "plugins.tmux-nvim" },
 	{ import = "plugins.blink-cmp" },
