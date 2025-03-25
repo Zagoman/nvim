@@ -71,7 +71,6 @@ return {
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 			end,
 		})
-
 		-- Define on_attach function for Ruff (Python linter)
 		local ruff_on_attach = function(client, bufnr)
 			if client.name == "ruff" then
@@ -84,11 +83,6 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
-				})
-			end,
-			["ts_ls"] = function()
-				lspconfig["ts_ls"].setup({
-					enabled = false,
 				})
 			end,
 			["vtsls"] = function()

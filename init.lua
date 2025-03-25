@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 -- Load plugins and configs
+require("config.autocommands")
 require("config.keymaps")
 require("plugins")
 require("overseer").setup()
