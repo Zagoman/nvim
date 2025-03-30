@@ -9,7 +9,6 @@ local plugins = {
 	{ import = "plugins.blink-cmp" },
 	{ import = "plugins.harpoon" },
 	{ import = "plugins.roslyn" },
-	{ import = "plugins.rainbow-delimiters" },
 	{ import = "plugins.gopher" },
 	{ import = "plugins.overseer" },
 	{ import = "plugins.conform" },

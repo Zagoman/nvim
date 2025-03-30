@@ -178,13 +178,6 @@ return {
 			desc = "Grep Open Buffers",
 		},
 		{
-			"<leader>sg",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep",
-		},
-		{
 			"<leader>sw",
 			function()
 				Snacks.picker.grep_word()
@@ -353,12 +346,6 @@ return {
 			desc = "Organize Imports",
 			mode = "n",
 		},
-		-- {
-		-- 	"<leader>mi",
-		-- 	vim.lsp.action["source.addMissingImports.ts"],
-		-- 	desc = "Add missing imports",
-		-- 	mode = "n",
-		-- },
 		{
 			"<leader>gd",
 			function()
