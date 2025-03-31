@@ -1,6 +1,6 @@
 return {
 	"GustavEikaas/easy-dotnet.nvim",
-	dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", "snacks.nvim" },
 	config = function()
 		local function get_secret_path(secret_guid)
 			local path = ""
@@ -90,7 +90,6 @@ return {
 				path = get_secret_path,
 			},
 			csproj_mappings = true,
-			fsproj_mappings = true,
 			auto_bootstrap_namespace = {
 				--block_scoped, file_scoped
 				type = "block_scoped",
@@ -101,7 +100,7 @@ return {
 			-- if no picker is specified, the plugin will determine
 			-- the available one automatically with this priority:
 			-- telescope -> fzf -> snacks ->  basic
-			picker = "telescope",
+			picker = "snacks",
 		})
 
 		-- Example command

@@ -2,6 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
+		---@diagnostic disable-next-line: undefined-global
 		require("conform").setup({
 			formatters_by_ft = {
 				javascript = { "prettierd" },

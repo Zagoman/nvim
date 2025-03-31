@@ -1,5 +1,11 @@
 {
     "diagnostics.disable": [
         "missing-fields"
+    ],
+    "diagnostics.globals": [
+        "vim",
+        "get_sdk_path",
+        "Snacks",
+        "require"
     ]
 }

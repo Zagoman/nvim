@@ -13,6 +13,7 @@ local plugins = {
 	{ import = "plugins.gopher" },
 	{ import = "plugins.overseer" },
 	{ import = "plugins.conform" },
+	{ import = "plugins.copilot" },
 	{ import = "plugins.which-key" },
 	{ import = "plugins.grug-far" },
 	{ import = "plugins.nvim-lspconfig" },
