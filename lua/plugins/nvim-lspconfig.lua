@@ -21,63 +21,7 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		local keymap = vim.keymap -- For conciseness
-
-		-- Create an autocmd for LSP attachment to set keybindings
-		vim.api.nvim_create_autocmd("LspAttach", {
-			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-			callback = function(ev)
-				-- Buffer local mappings
-				local opts = { buffer = ev.buf, silent = true }
-
-				-- Set keybinds with descriptions
-				opts.desc = "Show LSP references"
-				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
-
-				opts.desc = "Go to declaration"
-				keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-
-				opts.desc = "Go to definition"
-				keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-
-				opts.desc = "Show LSP implementations"
-				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
-
-				opts.desc = "Show LSP type definitions"
-				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-
-				opts.desc = "See available code actions"
-				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-
-				opts.desc = "Smart rename"
-				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-
-				opts.desc = "Show buffer diagnostics"
-				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
-
-				opts.desc = "Show line diagnostics"
-				keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-
-				opts.desc = "Go to previous diagnostic"
-				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-
-				opts.desc = "Go to next diagnostic"
-				keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-
-				opts.desc = "Show documentation for what is under cursor"
-				keymap.set("n", "K", vim.lsp.buf.hover, opts)
-
-				opts.desc = "Restart LSP"
-				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
-			end,
-		})
-		-- Define on_attach function for Ruff (Python linter)
-		local ruff_on_attach = function(client, bufnr)
-			if client.name == "ruff" then
-				-- Disable hover in favor of Pyright
-				client.server_capabilities.hoverProvider = false
-			end
-		end
+		mason_lspconfig.setup()
 		mason_lspconfig.setup_handlers({
 			-- Default handler for all installed servers
 			function(server_name)
@@ -96,7 +40,7 @@ return {
 						"typescript.tsx",
 					},
 					settings = {
-						complete_function_calls = true,
+						complete_function_calls = false,
 						vtsls = {
 							enableMoveToFileCodeAction = true,
 							autoUseWorkspaceTsdk = true,
@@ -110,7 +54,7 @@ return {
 						typescript = {
 							updateImportsOnFileMove = { enabled = "always" },
 							suggest = {
-								completeFunctionCalls = true,
+								completeFunctionCalls = false,
 							},
 							inlayHints = {
 								enumMemberValues = { enabled = true },
@@ -128,41 +72,6 @@ return {
 			["gopls"] = function()
 				lspconfig.gopls.setup({
 					capabilities = capabilities,
-					settings = {
-						gopls = {
-							gofumpt = true,
-							codelenses = {
-								gc_details = false,
-								generate = true,
-								regenerate_cgo = true,
-								run_govulncheck = true,
-								test = true,
-								tidy = true,
-								upgrade_dependency = true,
-								vendor = true,
-							},
-							hints = {
-								assignVariableTypes = true,
-								compositeLiteralFields = true,
-								compositeLiteralTypes = true,
-								constantValues = true,
-								functionTypeParameters = true,
-								parameterNames = true,
-								rangeVariableTypes = true,
-							},
-							analyses = {
-								nilness = true,
-								unusedparams = true,
-								unusedwrite = true,
-								useany = true,
-							},
-							usePlaceholders = true,
-							completeUnimported = true,
-							staticcheck = true,
-							directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
-							semanticTokens = true,
-						},
-					},
 				})
 			end,
 

@@ -9,6 +9,7 @@ local plugins = {
 	{ import = "plugins.blink-cmp" },
 	{ import = "plugins.harpoon" },
 	{ import = "plugins.roslyn" },
+	{ import = "plugins.easy-dotnet" },
 	{ import = "plugins.gopher" },
 	{ import = "plugins.overseer" },
 	{ import = "plugins.conform" },
