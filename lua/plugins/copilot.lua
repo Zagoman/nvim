@@ -11,12 +11,12 @@ return {
 				auto_trigger = true,
 				debounce = 75,
 				keymap = {
-					accept = "<M-y>",
+					accept = false,
 					accept_word = false,
-					accept_line = false,
-					next = "<M-n>",
-					prev = "<M-p>",
-					dismiss = "<C-]>",
+					accept_line = "<Tab>",
+					next = false,
+					prev = false,
+					dismiss = false,
 				},
 			},
 			filetypes = {
