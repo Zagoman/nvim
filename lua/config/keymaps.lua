@@ -29,6 +29,10 @@ keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart LSP rename" })
 ------------------- easy dotnet stuff -----------------------
 keymap.set("n", "<leader>dn", "<CMD>Dotnet<CR>", { desc = "Dotnet commands" })
 
+------------------- Overseer -----------------------
+keymap.set("n", "<leader>ov", "<CMD>OverseerToggle<CR>", { desc = "Overseer Toggle" })
+keymap.set("n", "<leader>or", "<CMD>OverseerRun<CR>", { desc = "Overseer Run" })
+
 --------------------  Movement Keys in Insert Mode -------------------
 -- keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" }) -- move to the beginning of the line
 -- keymap.set("i", "<C-e>", "<End>", { desc = "Move End of line" }) -- move to the end of the line
