@@ -1,5 +1,6 @@
 return {
 	"zbirenbaum/copilot.lua",
+	cmd = "Copilot",
 	lazy = true,
 	config = function()
 		require("copilot").setup({
@@ -20,6 +21,8 @@ return {
 				},
 			},
 			filetypes = {
+				yaml = false,
+				markdown = false,
 				help = false,
 				gitcommit = false,
 				gitrebase = false,
@@ -27,9 +30,9 @@ return {
 				svn = false,
 				cvs = false,
 				["."] = false,
+				["*"] = true,
 			},
-			copilot_node_command = "node", -- Node.js version must be > 18.x
-			server_opts_overrides = {},
+			copilot_node_command = "node",
 		})
 	end,
 }
