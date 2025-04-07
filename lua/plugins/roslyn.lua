@@ -1,7 +1,9 @@
 return {
 	"seblyng/roslyn.nvim",
 	ft = "cs",
+	dependencies = { "williamboman/mason.nvim" },
 	opts = {
-		-- your configuration comes here; leave empty for default settings
+
+		filewatching = "roslyn",
 	},
 }
