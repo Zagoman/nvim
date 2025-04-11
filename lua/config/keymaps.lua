@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 
 --------------------  File tree ; -------------------
-keymap.set("n", "<leader>pv", vim.cmd.Ex)
+keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "File tree" })
 
 --------------------  Move highlighted lines up and down ; -------------------
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")

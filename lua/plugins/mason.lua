@@ -18,7 +18,6 @@ return {
 			},
 			registries = {
 				"github:mason-org/mason-registry",
-				"github:Crashdummyy/mason-registry",
 			},
 		})
 		mason_tool_installer.setup({
@@ -33,22 +32,12 @@ return {
 				"prettierd",
 				-- eslint
 				"eslint_d",
-				-- sql
-				"sqlfluff",
-				-- markdown
-				"markdownlint-cli2",
-				"markdown-toc",
-				-- terraform
-				"tflint",
-				-- docker
-				"hadolint",
-				----- go
 				"gotests",
 				"gomodifytags",
 				"goimports",
 				"go-debug-adapter",
+				"csharpier",
 				------- LANGUAGE SERVERS ----------
-				-- "aze-pipelines-language-server",
 				"gopls",
 				"bash-language-server",
 				"css-lsp",
@@ -61,8 +50,6 @@ return {
 				"tailwindcss-language-server",
 				"vtsls",
 				"yaml-language-server",
-				-- { "roslyn", version = "4.14.0-2.25108.2", auto_update = false },
-				-- "roslyn",
 			},
 			auto_update = true,
 			run_on_start = true,
