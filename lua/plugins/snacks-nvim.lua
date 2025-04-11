@@ -313,7 +313,7 @@ return {
 			desc = "Goto Implementation",
 		},
 		{
-			"gy",
+			"gt",
 			function()
 				Snacks.picker.lsp_type_definitions()
 			end,
