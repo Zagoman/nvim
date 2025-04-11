@@ -4,6 +4,9 @@ local g = vim.g
 opt.guicursor = ""
 opt.updatetime = 50
 
+-- diagnostic is hidden by default. This shows on the line
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)

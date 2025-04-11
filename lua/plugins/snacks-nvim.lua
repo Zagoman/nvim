@@ -164,13 +164,6 @@ return {
 		},
 		-- Grep
 		{
-			"<leader>sb",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Buffer Lines",
-		},
-		{
 			"<leader>sB",
 			function()
 				Snacks.picker.grep_buffers()
@@ -199,20 +192,6 @@ return {
 				Snacks.picker.search_history()
 			end,
 			desc = "Search History",
-		},
-		{
-			"<leader>sa",
-			function()
-				Snacks.picker.autocmds()
-			end,
-			desc = "Autocmds",
-		},
-		{
-			"<leader>sb",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Buffer Lines",
 		},
 		{
 			"<leader>sc",
@@ -250,46 +229,11 @@ return {
 			desc = "Help Pages",
 		},
 		{
-			"<leader>sH",
-			function()
-				Snacks.picker.highlights()
-			end,
-			desc = "Highlights",
-		},
-		{
-			"<leader>si",
-			function()
-				Snacks.picker.icons()
-			end,
-			desc = "Icons",
-		},
-		{
-			"<leader>sj",
-			function()
-				Snacks.picker.jumps()
-			end,
-			desc = "Jumps",
-		},
-		{
 			"<leader>sk",
 			function()
 				Snacks.picker.keymaps()
 			end,
 			desc = "Keymaps",
-		},
-		{
-			"<leader>sl",
-			function()
-				Snacks.picker.loclist()
-			end,
-			desc = "Location List",
-		},
-		{
-			"<leader>sm",
-			function()
-				Snacks.picker.marks()
-			end,
-			desc = "Marks",
 		},
 		{
 			"<leader>sM",
@@ -313,13 +257,6 @@ return {
 			desc = "Quickfix List",
 		},
 		{
-			"<leader>sR",
-			function()
-				Snacks.picker.resume()
-			end,
-			desc = "Resume",
-		},
-		{
 			"<leader>su",
 			function()
 				Snacks.picker.undo()
@@ -335,17 +272,17 @@ return {
 		},
 		-- LSP
 
-		{
-			"<leader>oi",
-			function()
-				vim.lsp.buf.execute_command({
-					command = "typescript.organizeImports",
-					arguments = { vim.api.nvim_buf_get_name(0) },
-				})
-			end,
-			desc = "Organize Imports",
-			mode = "n",
-		},
+		-- {
+		-- 	"<leader>oi",
+		-- 	function()
+		-- 		vim.lsp.buf.execute_command({
+		-- 			command = "typescript.organizeImports",
+		-- 			arguments = { vim.api.nvim_buf_get_name(0) },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Organize Imports",
+		-- 	mode = "n",
+		-- },
 		{
 			"<leader>gd",
 			function()
@@ -390,6 +327,13 @@ return {
 			desc = "LSP Symbols",
 		},
 		{
+			"<leader>ca",
+			function()
+				vim.lsp.buf.code_action()
+			end,
+			desc = "LSP Code Actions",
+		},
+		{
 			"<leader>sS",
 			function()
 				Snacks.picker.lsp_workspace_symbols()
@@ -417,13 +361,6 @@ return {
 				Snacks.scratch()
 			end,
 			desc = "Toggle Scratch Buffer",
-		},
-		{
-			"<leader>S",
-			function()
-				Snacks.scratch.select()
-			end,
-			desc = "Select Scratch Buffer",
 		},
 		{
 			"<leader>n",
@@ -513,7 +450,7 @@ return {
 				Snacks.toggle
 					.option("background", { off = "light", on = "dark", name = "Dark Background" })
 					:map("<leader>ub")
-				Snacks.toggle.inlay_hints():map("<leader>uh")
+				Snacks.toggle.inlay_hints():map("<leader>tih")
 				Snacks.toggle.indent():map("<leader>ug")
 				Snacks.toggle.dim():map("<leader>uD")
 			end,
