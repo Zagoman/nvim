@@ -17,7 +17,6 @@ return {
 				graphql = { "prettierd", stop_after_first = true },
 				lua = { "stylua" },
 				sql = { "sqlfluff" },
-				cs = { "csharpier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
