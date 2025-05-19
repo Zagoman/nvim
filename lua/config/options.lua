@@ -5,11 +5,16 @@ opt.guicursor = ""
 opt.updatetime = 50
 
 -- diagnostic is hidden by default. This shows on the line
-vim.diagnostic.config({ virtual_lines = { current_line = true } })
+vim.diagnostic.config({
+	virtual_text = true,
+})
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+
+-- clipboard
+opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 
 -- tabs & indentation
 opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
