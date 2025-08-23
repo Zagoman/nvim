@@ -33,6 +33,10 @@ keymap.set("n", "<leader>dn", "<CMD>Dotnet<CR>", { desc = "Dotnet commands" })
 keymap.set("n", "<leader>ov", "<CMD>OverseerToggle<CR>", { desc = "Overseer Toggle" })
 keymap.set("n", "<leader>or", "<CMD>OverseerRun<CR>", { desc = "Overseer Run" })
 
+------------------- Quickfix -----------------------
+keymap.set("n", "<leader>cn", "<CMD>cnext<CR>", { desc = "Quickfix next" })
+keymap.set("n", "<leader>cN", "<CMD>cprev<CR>", { desc = "Quickfix next" })
+
 --------------------  Movement Keys in Insert Mode -------------------
 -- keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" }) -- move to the beginning of the line
 -- keymap.set("i", "<C-e>", "<End>", { desc = "Move End of line" }) -- move to the end of the line

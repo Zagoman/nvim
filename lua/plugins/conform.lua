@@ -17,12 +17,18 @@ return {
 				graphql = { "prettierd", stop_after_first = true },
 				lua = { "stylua" },
 				sql = { "sqlfluff" },
-				-- cs = { "csharpier" },
+				cs = { "csharpier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 2000,
+			},
+			formatters = {
+				csharpier = {
+					command = "dotnet",
+					args = { "csharpier", "format", "--write-stdout" },
+				},
 			},
 		})
 	end,

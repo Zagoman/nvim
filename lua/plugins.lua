@@ -1,5 +1,7 @@
 local plugins = {
 	{ import = "plugins.init" },
+	{ import = "plugins.copilot" },
+	{ import = "plugins.lazygit" },
 	{ import = "plugins.catppuccin" },
 	{ import = "plugins.oil" },
 	{ import = "plugins.treesitter" },
