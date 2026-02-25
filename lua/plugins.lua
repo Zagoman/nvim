@@ -1,5 +1,9 @@
 local plugins = {
+	git = {
+		url_format = "git@github.com:%s.git",
+	},
 	{ import = "plugins.init" },
+	{ import = "plugins.copilot-lsp" },
 	{ import = "plugins.copilot" },
 	{ import = "plugins.lazygit" },
 	{ import = "plugins.catppuccin" },
@@ -12,7 +16,7 @@ local plugins = {
 	{ import = "plugins.blink-cmp" },
 	{ import = "plugins.trouble" },
 	{ import = "plugins.easy-dotnet" },
-	{ import = "plugins.roslyn" },
+	-- { import = "plugins.roslyn" },
 	{ import = "plugins.gopher" },
 	{ import = "plugins.overseer" },
 	{ import = "plugins.conform" },

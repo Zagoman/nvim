@@ -3,5 +3,12 @@ return {
 	ft = "cs",
 	---@module 'roslyn.config'
 	---@type RoslynNvimConfig
-	opts = {},
+	opts = {
+		-- filewatching = "off",
+		settings = {
+			fileExcludes = {
+				"**/Migrations/**",
+			},
+		},
+	},
 }
