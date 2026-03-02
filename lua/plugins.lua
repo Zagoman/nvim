@@ -5,6 +5,7 @@ local plugins = {
 	{ import = "plugins.init" },
 	{ import = "plugins.copilot-lsp" },
 	{ import = "plugins.copilot" },
+	{ import = "plugins.copilot-chat" },
 	{ import = "plugins.lazygit" },
 	{ import = "plugins.catppuccin" },
 	{ import = "plugins.oil" },
