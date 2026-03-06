@@ -44,3 +44,11 @@ keymap.set("n", "<leader>cN", "<CMD>cprev<CR>", { desc = "Quickfix next" })
 -- keymap.set("i", "<C-l>", "<Right>", { desc = "Move Right" }) -- move right
 -- keymap.set("i", "<C-j>", "<Down>", { desc = "Move Down" }) -- move down
 -- keymap.set("i", "<C-k>", "<Up>", { desc = "Move Up" }) -- move up
+--
+--------------------  CodeCompanion  -------------------
+keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+keymap.set({ "n", "v" }, "<leader>co", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])

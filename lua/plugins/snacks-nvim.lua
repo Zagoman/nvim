@@ -405,22 +405,6 @@ return {
 			end,
 			desc = "Toggle Terminal",
 		},
-		--AI Section
-		{
-			"<leader>co",
-			function()
-				require("CopilotChat").toggle()
-			end,
-			desc = "Open Copilot Chat",
-		},
-		{
-			"<leader>cs",
-			function()
-				require("CopilotChat").stop()
-			end,
-			desc = "Open Copilot Chat",
-		},
-
 		{
 			"<leader>N",
 			desc = "Neovim News",
